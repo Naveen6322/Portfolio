@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naveen Ram R M</title>
+  <link rel="stylesheet" href="{% static '/css/style.css' %}" />
+  <script defer src="{% static '/js/theme.js' %}"></script>
+</head>
+
+<body>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="left">
+      <div class="logo-container">
+        <img src="{% static '/images/logo.svg' %}" alt="Logo" class="logo" />
+        <div class="name">Naveen Ram R M</div>
+      </div>
+
+      <nav>
+        <a href="#home" class="active">Home</a>
+        <span class="divider">⋮</span>
+        <a href="{% url 'resume' %}">Resume</a>
+      </nav>
+    </div>
+
+    <div class="icons">
+      <button id="search-btn" aria-label="Search">🔍</button>
+      <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+    </div>
+  </header>
+
+  <!-- Search box -->
+  <div class="search-container" id="search-container">
+    <input type="text" id="search-input" placeholder="Search projects..." />
+  </div>
+</header>
+
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main>
+    <section id="home" class="intro">
+      <h1>Hi, I'm Naveen!</h1>
+       <p class="objective">
+    Passionate software developer skilled in Python, Django, and modern web technologies.  
+    I aim to create efficient, scalable, and user-friendly applications that connect technology  
+    with real-world impact.
+
+        <span class="highlight">Python</span>, <span class="highlight">Django</span>, and
+        <span class="highlight">JavaScript</span>.
+      </p>
+      <p>
+        I am Done a <strong>MCA</strong> at
+        <em>St. Joseph’s University, Bengaluru</em>.
+      </p>
+      <p>
+        Connect with me on  
+        <a href="https://www.linkedin.com/in/naveen-ram-188ab1221" target="_blank">LinkedIn</a>  
+        or via <a href="mailto:naveenram0603@gmail.com">Email</a>.
+              </p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <p><a href="#">Blog Page</a>: A Django-based blog app with CRUD and user authentication.</p>
+      <p><a href="#">Bus Ticketing System (IoT)</a>: RFID ticketing with LCD and motorized control.</p>
+      <p><a href="#">Smart Helmet</a>: IoT and GSM-based alcohol detection system.</p>
+    </section>
+
+    <section id="internship">
+      <h2>Internship</h2>
+      <p><strong>eCentric Consultancy Services Pvt. Ltd. (Tuhund ERP)</strong> — Frontend Developer</p>
+      <p>Built and optimized JSP-based ERP modules for delivery and asset management systems.</p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li><strong>Backend:</strong> Python, Django, REST API</li>
+        <li><strong>Frontend:</strong> HTML, CSS, JavaScript,</li>
+        <li><strong>Tools:</strong> Git, GitHub, Postman</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© Naveen Ram R M 2025.</p>
+    <div class="footer-links">
+      <a href="#home">Home</a> |
+      <a href="{% url 'resume' %}">Resume</a>
+    </div>
+  </footer>
+</body>
+</html>

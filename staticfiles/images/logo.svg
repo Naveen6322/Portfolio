@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="48" height="48">
+  <style>
+    :root{
+      --accent-light: #E50914;  /* netflix-like red */
+      --accent-dark:  #FF625A;  /* softer on dark bg */
+    }
+    text{
+      font-family: ui-monospace, SFMono-Regular, 'Fira Code', monospace;
+      font-weight: 800;
+      font-size: 72px;
+      fill: var(--accent-light);
+      text-anchor: middle;
+      dominant-baseline: middle;
+      transition: fill .2s ease;
+    }
+    [data-theme='dark'] text { fill: var(--accent-dark); }
+  </style>
+
+  <rect width="120" height="120" fill="none"></rect>
+  <text x="50%" y="56%">N</text>
+</svg>

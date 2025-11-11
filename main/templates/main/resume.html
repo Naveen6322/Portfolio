@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume — Naveen Ram R M</title>
+  <link rel="stylesheet" href="{% static '/css/style.css' %}">
+  <script defer src="{% static '/js/theme.js' %}"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">Home</a>
+      <a href="#" class="active">Resume</a>
+      <button id="search-btn" aria-label="Search">🔍</button>
+      <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+    </nav>
+  </header>
+
+  <main class="resume-container">
+    <section class="resume-section">
+      <h1>Resume</h1>
+      <div class="resume-actions">
+        <a href="{% static 'docs/Naveen resume(1).pdf' %}" download class="download-btn">
+          <span>📥</span> Download PDF
+        </a>
+        <a href="{% static 'docs/Naveen resume(1).pdf' %}" target="_blank" class="view-btn">
+          <span>👁️</span> View PDF
+        </a>
+      </div>
+      <div class="resume-preview">
+        <iframe src="{% static 'docs/Naveen resume(1).pdf' %}" type="application/pdf" width="100%" height="800px">
+          <p>Your browser doesn't support embedded PDFs.
+            <a href="{% static 'docs/Naveen resume(1).pdf' %}">Click here to download the PDF file.</a>
+          </p>
+        </iframe>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <style>
+    :root {
+      --accent-light: #555555;  /* cool gray for light mode */
+      --accent-dark:  #CCCCCC;  /* softer gray for dark mode */
+    }
+
+    rect {
+      fill: none;
+    }
+
+    text {
+      font-family: ui-monospace, SFMono-Regular, 'Fira Code', Menlo, monospace;
+      font-weight: 800;
+      font-size: 72px;
+      fill: var(--accent-light);
+      text-anchor: middle;
+      dominant-baseline: middle;
+      transition: fill 0.25s ease;
+    }
+
+    [data-theme='dark'] text {
+      fill: var(--accent-dark);
+    }
+  </style>
+
+  <!-- background frame -->
+  <rect width="120" height="120"></rect>
+
+  <!-- monospace N -->
+  <text x="50%" y="58%">N</text>
+</svg>
