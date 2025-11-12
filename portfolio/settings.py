@@ -15,8 +15,7 @@ import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = '/static/'
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -122,6 +121,9 @@ STATIC_URL = '/static/'
 
 # (Optional, only if you also have a global static folder)
 # STATICFILES_DIRS = [ BASE_DIR / "static" ]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/static/'
 
 # (Optional but recommended for production)
 STATIC_ROOT = BASE_DIR / "staticfiles"
