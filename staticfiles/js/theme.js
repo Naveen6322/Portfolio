@@ -15,3 +15,17 @@ toggleBtn.addEventListener('click', () => {
     toggleBtn.textContent = '☀️';
   }
 });
+
+// ===== Search Button Toggle =====
+const searchBtn = document.getElementById('search-btn');
+const searchBox = document.getElementById('search-container');
+const searchInput = document.getElementById('search-input');
+
+if (searchBtn && searchBox) {
+  searchBtn.addEventListener('click', () => {
+    searchBox.classList.toggle('show');
+    if (searchBox.classList.contains('show')) {
+      searchInput.focus();
+    }
+  });
+}
