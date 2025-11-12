@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "buildCommand": "bash vercel_build.sh",
   "builds": [
     {
       "src": "portfolio/wsgi.py",
@@ -8,6 +7,10 @@
     }
   ],
   "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
     {
       "src": "/(.*)",
       "dest": "portfolio/wsgi.py"
