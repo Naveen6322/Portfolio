@@ -5,10 +5,14 @@
       "use": "@vercel/python"
     }
   ],
-  "env": {
-    "DJANGO_SETTINGS_MODULE": "portfolio.settings",
-    "PYTHONUNBUFFERED": "1"
-  },
-  "buildCommand": "pip install -r requirements.txt && python manage.py collectstatic --noinput",
-  "startCommand": "gunicorn portfolio.wsgi"
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "portfolio/wsgi.py"
+    }
+  ]
 }
