@@ -1,16 +1,12 @@
-{
-  "version": 2,
-  "builds": [
-    {
-      "src": "portfolio/wsgi.py",
-      "use": "@vercel/python",
-      "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "portfolio/wsgi.py"
-    }
-  ]
-}
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.home, name='home'),  # Root URL pattern
+    path('home/', views.home, name='home'),
+    path('about/', views.about, name='about'),
+    path('projects/', views.projects, name='projects'),
+    path('contact/', views.contact, name='contact'),
+    path('resume/', views.resume, name='resume'),
+   
+]
