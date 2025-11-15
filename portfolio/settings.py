@@ -15,9 +15,11 @@ from pathlib import Path
 import pymysql
 pymysql.install_as_MySQLdb()
 
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+
+VERCEL_ENV = os.environ.get('VERCEL_ENV')
 
 
 
@@ -28,10 +30,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-o0y6)&goojb&zq$ik^m!+9#t$ek-__ohbqr&!w+$q#+%vk*_hp'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True if not VERCEL_ENV else False
 
-ALLOWED_HOSTS = ['.vercel.app']
-
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -81,17 +82,25 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 # Database configuration
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'portfolio',
-        'USER': 'root',          # or your MySQL username
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': '3306',
+# Database - Use SQLite for Vercel
+if VERCEL_ENV:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': '/tmp/db.sqlite3',
+        }
     }
-}
-
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'portfolio',
+            'USER': 'root',
+            'PASSWORD': '',
+            'HOST': 'localhost',
+            'PORT': '3306',
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
