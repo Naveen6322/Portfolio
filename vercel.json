@@ -1,8 +1,8 @@
 {
-  "version": 3,
+  "version": 2,
   "builds": [
     {
-      "src": "manage.py",
+      "src": "portfolio/wsgi.py",
       "use": "@vercel/python"
     },
     {
@@ -12,7 +12,9 @@
     }
   ],
   "routes": [
-    { "src": "/static/(.*)", "dest": "/static/$1" },
-    { "src": "/(.*)", "dest": "/api/index.py" }
+    {
+      "src": "/(.*)",
+      "dest": "portfolio/wsgi.py"
+    }
   ]
 }
