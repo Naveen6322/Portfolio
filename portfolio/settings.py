@@ -131,7 +131,12 @@ USE_TZ = True
 
 # Static files configuration
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [ BASE_DIR / 'main' / 'static' ]
+
+STATICFILES_DIRS = [
+    BASE_DIR / 'main' / 'static',   # 👈 THIS IS THE KEY FIX
+]
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Only include STATICFILES_DIRS if static folder exists and has files
 # Otherwise comment it out or remove it
