@@ -131,6 +131,7 @@ USE_TZ = True
 
 # Static files configuration
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [ BASE_DIR / 'main' / 'static' ]
 
 # Only include STATICFILES_DIRS if static folder exists and has files
 # Otherwise comment it out or remove it
@@ -144,7 +145,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
 
