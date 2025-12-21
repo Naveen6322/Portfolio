@@ -209,36 +209,33 @@ footer {
   }
 }
 /* ===== Resume Buttons ===== */
-.download-btn{
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 8px 14px;
-  margin: 8px 6px 0 0;
-  font-family: ui-monospace, SFMono-Regular, 'Fira Code', monospace;
-  font-size: 13px;
-  text-decoration: none;
-  color: var(--text);
-  background: transparent;
-  border: 1px solid var(--text);
-  border-radius: 8px;
-  transition: all 0.25s ease;
+.resume-actions {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
 }
-.view-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 8px 14px;
-  margin: 8px 6px 0 0;
-  font-family: ui-monospace, SFMono-Regular, 'Fira Code', monospace;
-  font-size: 13px;
-  text-decoration: none;
-  color: var(--text);
-  background: transparent;
-  border: 1px solid var(--text);
-  border-radius: 8px;
-  transition: all 0.25s ease;
+
+.btn-resume {
+    padding: 8px 18px;
+    border: 1.5px solid #000;
+    border-radius: 10px;
+    background: #fff;
+    color: #000;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.25s ease;
 }
+
+.btn-resume:hover {
+    background: #000;
+    color: #fff;
+}
+
 
 .download-btn:hover,
 .view-btn:hover {

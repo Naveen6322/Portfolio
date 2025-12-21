@@ -22,13 +22,17 @@
     <section class="resume-section">
       <h1>Resume</h1>
       <div class="resume-actions">
-      <a href="{% static 'file/Resume2.pdf' %}" download>Download PDF</a>
-          <span>📥</span> Download PDF
-        </a>
-        <a href="{% static 'file/Resume2.pdf' %}" target="_blank" class="view-btn">
-          <span>👁️</span> View PDF
-        </a>
-      </div>
+     <div class="resume-actions">
+    <!-- Download Button -->
+    <a href="{% static 'file/Resume2.pdf' %}" download class="btn-resume">
+        ⬇ Download PDF
+    </a>
+
+    <!-- View Button -->
+    <a href="{% static 'file/Resume2.pdf' %}" target="_blank" class="btn-resume">
+        👁 View PDF
+    </a>
+</div>
       <div class="resume-preview">
       
 
@@ -38,10 +42,6 @@
     width="100%"
     height="600">
 </iframe>
-
-<a href="{% static 'file/Resume2.pdf' %}" download>Download PDF</a>
-          <span>📥</span> Download PDF
-        </a>
 
 
 
